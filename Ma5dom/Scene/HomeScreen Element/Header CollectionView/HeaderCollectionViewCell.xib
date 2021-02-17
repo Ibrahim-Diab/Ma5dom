@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Head" id="gTV-IL-0wX" customClass="HeaderCollectionViewCell" customModule="Ma5dom" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="336" height="147"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="336" height="147"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dbC-sQ-Ign">
+                        <rect key="frame" x="0.0" y="0.0" width="336" height="147"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="G2g-Ol-UkI">
+                                <rect key="frame" x="30" y="10" width="276" height="127"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="ILb-t5-Nua">
+                                <rect key="frame" x="148.5" y="109.5" width="39" height="37"/>
+                                <color key="pageIndicatorTintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="currentPageIndicatorTintColor" red="0.21176470589999999" green="0.61176470589999998" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </pageControl>
+                        </subviews>
+                        <color key="backgroundColor" red="0.88235294117647056" green="0.88627450980392153" blue="0.90588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="ILb-t5-Nua" firstAttribute="centerX" secondItem="dbC-sQ-Ign" secondAttribute="centerX" id="8id-03-LUg"/>
+                            <constraint firstAttribute="bottom" secondItem="G2g-Ol-UkI" secondAttribute="bottom" constant="10" id="L55-Yg-dvS"/>
+                            <constraint firstItem="G2g-Ol-UkI" firstAttribute="leading" secondItem="dbC-sQ-Ign" secondAttribute="leading" constant="30" id="eo7-Ii-YOo"/>
+                            <constraint firstAttribute="trailing" secondItem="G2g-Ol-UkI" secondAttribute="trailing" constant="30" id="lDW-fi-snQ"/>
+                            <constraint firstAttribute="bottom" secondItem="ILb-t5-Nua" secondAttribute="bottom" constant="0.5" id="t6r-tt-rZ9"/>
+                            <constraint firstItem="G2g-Ol-UkI" firstAttribute="top" secondItem="dbC-sQ-Ign" secondAttribute="top" constant="10" id="wBs-Fl-LIV"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="dbC-sQ-Ign" secondAttribute="bottom" id="3Wr-CT-N4G"/>
+                <constraint firstItem="dbC-sQ-Ign" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="a04-Lt-YdP"/>
+                <constraint firstAttribute="trailing" secondItem="dbC-sQ-Ign" secondAttribute="trailing" id="fpb-cj-dm0"/>
+                <constraint firstItem="dbC-sQ-Ign" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="iGu-Xp-jMb"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="336" height="147"/>
+            <connections>
+                <outlet property="ImageHead" destination="G2g-Ol-UkI" id="0Uw-ld-EDC"/>
+                <outlet property="pagecontrol" destination="ILb-t5-Nua" id="EbN-yP-OCN"/>
+            </connections>
+            <point key="canvasLocation" x="-433" y="43"/>
+        </collectionViewCell>
+    </objects>
+</document>
