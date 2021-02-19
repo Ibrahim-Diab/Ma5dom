@@ -26,7 +26,10 @@ class CollectionTableViewCell: UITableViewCell,UICollectionViewDelegate,UICollec
         collectionitems.reloadData()
         
     }
-    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 3
+    }
+
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         if section == 0

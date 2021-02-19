@@ -13,6 +13,7 @@
                 <outlet property="HomeTableView" destination="WpC-Gk-2c0" id="V0n-yj-r41"/>
                 <outlet property="SearchBar" destination="s8d-aZ-RgH" id="B1o-SQ-caW"/>
                 <outlet property="TopView" destination="R1x-kS-0y0" id="Flr-rd-fml"/>
+                <outlet property="pagecontrol" destination="pLk-73-UX5" id="GVe-nS-BRe"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="4ra-O1-Jra"/>
             </connections>
         </placeholder>
@@ -66,7 +67,7 @@
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="PlC-Xb-YTo">
                     <rect key="frame" x="0.0" y="140" width="414" height="200"/>
                     <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
-                    <color key="tintColor" systemColor="linkColor" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="tintColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="200" id="BWI-An-0k3"/>
                     </constraints>
@@ -81,6 +82,14 @@
                     <rect key="frame" x="0.0" y="340" width="414" height="556"/>
                     <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
                 </tableView>
+                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="pLk-73-UX5">
+                    <rect key="frame" x="177" y="298" width="60" height="37"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="fIN-Cu-mv0"/>
+                    </constraints>
+                    <color key="pageIndicatorTintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="currentPageIndicatorTintColor" red="0.21176470589999999" green="0.61176470589999998" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </pageControl>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
@@ -92,7 +101,9 @@
                 <constraint firstItem="R1x-kS-0y0" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="dWq-3U-9Vl"/>
                 <constraint firstItem="PlC-Xb-YTo" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="drk-rb-XBl"/>
                 <constraint firstItem="R1x-kS-0y0" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="fPk-pY-2Rz"/>
+                <constraint firstItem="WpC-Gk-2c0" firstAttribute="top" secondItem="pLk-73-UX5" secondAttribute="bottom" constant="5" id="kuE-6j-440"/>
                 <constraint firstItem="PlC-Xb-YTo" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="uTF-6a-fHF"/>
+                <constraint firstItem="pLk-73-UX5" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="yFR-bA-h0T"/>
                 <constraint firstItem="PlC-Xb-YTo" firstAttribute="top" secondItem="R1x-kS-0y0" secondAttribute="bottom" id="yPB-c9-skA"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

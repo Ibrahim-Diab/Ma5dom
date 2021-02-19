@@ -13,7 +13,8 @@ class HomeController: UIViewController {
     
     @IBOutlet weak var HomeTableView: UITableView!
     @IBOutlet weak var SearchBar: UISearchBar!
- 
+
+    @IBOutlet weak var pagecontrol: UIPageControl!
     @IBOutlet weak var CollectionViewHeader: UICollectionView!
     @IBOutlet weak var TopView: UIView!
   
@@ -119,6 +120,7 @@ extension HomeController:UITableViewDelegate,UITableViewDataSource
         return cell
         
     }
+
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
         if indexPath.section == 0

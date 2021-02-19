@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F407793225DE0625000A3A89 /* SigninVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F407793025DE0625000A3A89 /* SigninVC.swift */; };
+		F407793325DE0625000A3A89 /* SigninVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F407793125DE0625000A3A89 /* SigninVC.xib */; };
+		F407793625DE0646000A3A89 /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F407793425DE0646000A3A89 /* SignupVC.swift */; };
+		F407793725DE0646000A3A89 /* SignupVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F407793525DE0646000A3A89 /* SignupVC.xib */; };
 		F47B40C725C848A30056C97D /* HomeController+CollectionViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47B40C625C848A30056C97D /* HomeController+CollectionViews.swift */; };
 		F4926BD425CA29D8001D9018 /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4926BD325CA29D8001D9018 /* TabbarController.swift */; };
 		F49282C425D21D67001A9C3D /* DepartmentVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49282C225D21D67001A9C3D /* DepartmentVc.swift */; };
@@ -36,6 +40,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F407793025DE0625000A3A89 /* SigninVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninVC.swift; sourceTree = "<group>"; };
+		F407793125DE0625000A3A89 /* SigninVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SigninVC.xib; sourceTree = "<group>"; };
+		F407793425DE0646000A3A89 /* SignupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupVC.swift; sourceTree = "<group>"; };
+		F407793525DE0646000A3A89 /* SignupVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignupVC.xib; sourceTree = "<group>"; };
 		F47B40C625C848A30056C97D /* HomeController+CollectionViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeController+CollectionViews.swift"; sourceTree = "<group>"; };
 		F4926BD325CA29D8001D9018 /* TabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarController.swift; sourceTree = "<group>"; };
 		F49282C225D21D67001A9C3D /* DepartmentVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentVc.swift; sourceTree = "<group>"; };
@@ -49,7 +57,7 @@
 		F494504A25C73EE20013E56E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F494504C25C73EE20013E56E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F494505225C740910013E56E /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
-		F494505325C740910013E56E /* HomeController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeController.xib; sourceTree = "<group>"; };
+		F494505325C740910013E56E /* HomeController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = HomeController.xib; path = "Ma5dom/Scene/HomeScreen Element/HomeController.xib"; sourceTree = SOURCE_ROOT; };
 		F494505625C7459B0013E56E /* exetension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = exetension.swift; sourceTree = "<group>"; };
 		F494505825C779100013E56E /* HeaderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCollectionViewCell.swift; sourceTree = "<group>"; };
 		F494505925C779100013E56E /* HeaderCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -77,10 +85,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F407793825DE065F000A3A89 /* Signin and Signup Scene */ = {
+			isa = PBXGroup;
+			children = (
+				F407793125DE0625000A3A89 /* SigninVC.xib */,
+				F407793525DE0646000A3A89 /* SignupVC.xib */,
+			);
+			path = "Signin and Signup Scene";
+			sourceTree = "<group>";
+		};
+		F407793925DE06AD000A3A89 /* Signin and Signup VC */ = {
+			isa = PBXGroup;
+			children = (
+				F407793825DE065F000A3A89 /* Signin and Signup Scene */,
+				F407793025DE0625000A3A89 /* SigninVC.swift */,
+				F407793425DE0646000A3A89 /* SignupVC.swift */,
+			);
+			path = "Signin and Signup VC";
+			sourceTree = "<group>";
+		};
 		F4489C0625C8EF01002207F1 /* HomeScreen Element */ = {
 			isa = PBXGroup;
 			children = (
-				F494505325C740910013E56E /* HomeController.xib */,
+				F4CC3C5E25D884A8009AEB9F /* HomeController */,
 				F49D50FA25C9CF6B00A887F1 /* DepartMentCollectionViewCell */,
 				F47B40C425C848440056C97D /* Header CollectionView */,
 				F4A05C5325CBB7AE00F7503C /* TableVIewCellAsCollection */,
@@ -103,7 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				F4489C0625C8EF01002207F1 /* HomeScreen Element */,
-				F49282CA25D22709001A9C3D /* Department CollectionView */,
+				F4CC3C5F25D884BC009AEB9F /* DepatrmentController */,
 				F4CC3C6125D88504009AEB9F /* Launch  */,
 			);
 			path = Scene;
@@ -116,25 +143,6 @@
 				F494505925C779100013E56E /* HeaderCollectionViewCell.xib */,
 			);
 			path = "Header CollectionView";
-			sourceTree = "<group>";
-		};
-		F47B40C525C848720056C97D /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				F4CC3C6025D884DD009AEB9F /* LaunchController */,
-				F4CC3C5E25D884A8009AEB9F /* HomeController */,
-				F4CC3C5F25D884BC009AEB9F /* DepatrmentController */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		F49282CA25D22709001A9C3D /* Department CollectionView */ = {
-			isa = PBXGroup;
-			children = (
-				F49282C325D21D67001A9C3D /* DepartmentVc.xib */,
-				F49282CB25D2272E001A9C3D /* DepartmentCell */,
-			);
-			path = "Department CollectionView";
 			sourceTree = "<group>";
 		};
 		F49282CB25D2272E001A9C3D /* DepartmentCell */ = {
@@ -167,7 +175,6 @@
 			children = (
 				F494504C25C73EE20013E56E /* Info.plist */,
 				F47B40C225C847B20056C97D /* Support Files */,
-				F47B40C525C848720056C97D /* Controller */,
 				F47B40C325C848060056C97D /* Scene */,
 				F4A05C5025CBB2F300F7503C /* Model */,
 				F49282CC25D22B3A001A9C3D /* Assets.xcassets */,
@@ -213,6 +220,7 @@
 		F4CC3C5E25D884A8009AEB9F /* HomeController */ = {
 			isa = PBXGroup;
 			children = (
+				F494505325C740910013E56E /* HomeController.xib */,
 				F494505225C740910013E56E /* HomeController.swift */,
 				F47B40C625C848A30056C97D /* HomeController+CollectionViews.swift */,
 				F4926BD325CA29D8001D9018 /* TabbarController.swift */,
@@ -223,7 +231,9 @@
 		F4CC3C5F25D884BC009AEB9F /* DepatrmentController */ = {
 			isa = PBXGroup;
 			children = (
+				F49282CB25D2272E001A9C3D /* DepartmentCell */,
 				F49282C225D21D67001A9C3D /* DepartmentVc.swift */,
+				F49282C325D21D67001A9C3D /* DepartmentVc.xib */,
 			);
 			path = DepatrmentController;
 			sourceTree = "<group>";
@@ -231,7 +241,10 @@
 		F4CC3C6025D884DD009AEB9F /* LaunchController */ = {
 			isa = PBXGroup;
 			children = (
+				F4CC3C5B25D88461009AEB9F /* LanuchVC.xib */,
 				F4CC3C5A25D88461009AEB9F /* LanuchVC.swift */,
+				F4FB472F25DA0ACA000A8EF6 /* LaunchCollectionViewCell */,
+				F407793925DE06AD000A3A89 /* Signin and Signup VC */,
 			);
 			path = LaunchController;
 			sourceTree = "<group>";
@@ -239,9 +252,8 @@
 		F4CC3C6125D88504009AEB9F /* Launch  */ = {
 			isa = PBXGroup;
 			children = (
-				F4FB472F25DA0ACA000A8EF6 /* LaunchCollectionViewCell */,
 				F494504925C73EE20013E56E /* LaunchScreen.storyboard */,
-				F4CC3C5B25D88461009AEB9F /* LanuchVC.xib */,
+				F4CC3C6025D884DD009AEB9F /* LaunchController */,
 			);
 			path = "Launch ";
 			sourceTree = "<group>";
@@ -319,7 +331,9 @@
 				F4A05C5825CBB7FC00F7503C /* CollectionViewItemsCell.xib in Resources */,
 				F494505525C740910013E56E /* HomeController.xib in Resources */,
 				F49282C925D22700001A9C3D /* DepartmenCell.xib in Resources */,
+				F407793725DE0646000A3A89 /* SignupVC.xib in Resources */,
 				F49D50F925C9C8A100A887F1 /* DepartMentCollectionViewCell.xib in Resources */,
+				F407793325DE0625000A3A89 /* SigninVC.xib in Resources */,
 				F49282CD25D22B3A001A9C3D /* Assets.xcassets in Resources */,
 				F49282C525D21D67001A9C3D /* DepartmentVc.xib in Resources */,
 				F4CC3C5D25D88461009AEB9F /* LanuchVC.xib in Resources */,
@@ -341,6 +355,8 @@
 				F47B40C725C848A30056C97D /* HomeController+CollectionViews.swift in Sources */,
 				F49D50F825C9C8A100A887F1 /* DepartMentCollectionViewCell.swift in Sources */,
 				F494505725C7459B0013E56E /* exetension.swift in Sources */,
+				F407793225DE0625000A3A89 /* SigninVC.swift in Sources */,
+				F407793625DE0646000A3A89 /* SignupVC.swift in Sources */,
 				F49282C825D22700001A9C3D /* DepartmenCell.swift in Sources */,
 				F4A05C5225CBB33600F7503C /* DataServices.swift in Sources */,
 				F49282C425D21D67001A9C3D /* DepartmentVc.swift in Sources */,

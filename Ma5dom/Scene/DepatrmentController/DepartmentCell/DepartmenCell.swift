@@ -16,8 +16,6 @@ class DepartmenCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         imagedep.contentMode = .scaleAspectFit
-     
-       
      //   viewofcell.layer.masksToBounds = false
     }
     

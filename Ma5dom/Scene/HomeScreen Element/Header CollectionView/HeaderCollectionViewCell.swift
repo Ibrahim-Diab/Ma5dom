@@ -11,7 +11,6 @@ import UIKit
 class HeaderCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var ImageHead: UIImageView!
-    @IBOutlet weak var pagecontrol: UIPageControl!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -20,7 +19,6 @@ class HeaderCollectionViewCell: UICollectionViewCell {
         ImageHead.layer.borderWidth = 1.5
         ImageHead.layer.borderColor = UIColor.black.cgColor
         ImageHead.clipsToBounds = true
-        pagecontrol.numberOfPages = 8
     }
     
 }

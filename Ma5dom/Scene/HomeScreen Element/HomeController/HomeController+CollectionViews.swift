@@ -17,10 +17,8 @@ extension HomeController:UICollectionViewDelegate,UICollectionViewDataSource,UIC
         CollectionViewHeader.delegate = self
         CollectionViewHeader.dataSource = self
         CollectionViewHeader.register(UINib(nibName: "HeaderCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "Head")
-       time = Timer.scheduledTimer(timeInterval: 2.5, target: self, selector: #selector(moveonTime), userInfo: nil, repeats: true)
-     //   PageControl.numberOfPages = photo.count
-        
-        
+        time = Timer.scheduledTimer(timeInterval: 2.5, target: self, selector: #selector(moveonTime), userInfo: nil, repeats: true)
+           pagecontrol.numberOfPages = photo.count
         
         // department collectionview
         // i change it
@@ -46,8 +44,7 @@ extension HomeController:UICollectionViewDelegate,UICollectionViewDataSource,UIC
             currentindexphoto = 0
         }
         CollectionViewHeader.scrollToItem(at: IndexPath(item: currentindexphoto, section: 0), at:.centeredHorizontally, animated: true)
-      //  PageControl.currentPage = currentindexphoto
-
+       
     }
     
     
@@ -60,15 +57,17 @@ extension HomeController:UICollectionViewDelegate,UICollectionViewDataSource,UIC
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-       let cell = CollectionViewHeader.dequeueReusableCell(withReuseIdentifier: "Head", for: indexPath) as! HeaderCollectionViewCell
-                  cell.ImageHead.image = UIImage(named: photo[indexPath.row])
-        cell.pagecontrol.currentPage = indexPath.row
-                  return cell
+        let cell = CollectionViewHeader.dequeueReusableCell(withReuseIdentifier: "Head", for: indexPath) as! HeaderCollectionViewCell
+        cell.ImageHead.image = UIImage(named: photo[indexPath.row])
+        return cell
+        
+    }
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        self.pagecontrol.currentPage = indexPath.row
         
     }
     
-    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-       return CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
-}
+        return CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
+    }
 }

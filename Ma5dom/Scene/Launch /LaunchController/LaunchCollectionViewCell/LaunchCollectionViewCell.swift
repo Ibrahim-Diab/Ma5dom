@@ -21,21 +21,15 @@ class LaunchCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-    func configcell(image:String,firsttext:String,sndtext:String,index:Int)
+    func configcell(image:String,firsttext:String,sndtext:String)
     {
         imageLaunch.image = UIImage(named: image)
          FirstText.text = firsttext
          SecondText.text = sndtext
-         currentcell.currentPage = index
-        skipall.addTarget(self, action: #selector(skipallscreen), for: .touchUpInside)
-    }
-    @objc func skipallscreen()
-    {
-         let dest = TabbarController()
-        dest.modalPresentationStyle = .fullScreen
-        self.window?.rootViewController?.present(dest, animated: true, completion: nil)
+      
         
     }
+  
    
     
 }
