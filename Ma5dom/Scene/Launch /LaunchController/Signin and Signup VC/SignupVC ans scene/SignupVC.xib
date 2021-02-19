@@ -11,9 +11,9 @@
             <connections>
                 <outlet property="chooseview" destination="U6b-4x-uVa" id="yMR-Z5-42g"/>
                 <outlet property="nextbutton" destination="NjJ-Kq-ujA" id="jw7-Pm-eiH"/>
+                <outlet property="segmentcontrol" destination="5ob-xf-D3W" id="zTV-LC-rIB"/>
                 <outlet property="supplierbutton" destination="gII-wB-pGU" id="brb-WS-Lyc"/>
                 <outlet property="topview" destination="8Eg-td-Vhe" id="RJd-wY-EAD"/>
-                <outlet property="upsegmentcontrol" destination="5ob-xf-D3W" id="zTV-LC-rIB"/>
                 <outlet property="userbutton" destination="ZNZ-jT-FLM" id="flJ-od-b1C"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>

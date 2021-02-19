@@ -26,6 +26,8 @@
 		F494505725C7459B0013E56E /* exetension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F494505625C7459B0013E56E /* exetension.swift */; };
 		F494505A25C779100013E56E /* HeaderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F494505825C779100013E56E /* HeaderCollectionViewCell.swift */; };
 		F494505B25C779100013E56E /* HeaderCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F494505925C779100013E56E /* HeaderCollectionViewCell.xib */; };
+		F49B090B25DFE24200A2FBE1 /* Signupall.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49B090925DFE24200A2FBE1 /* Signupall.swift */; };
+		F49B090C25DFE24200A2FBE1 /* Signupall.xib in Resources */ = {isa = PBXBuildFile; fileRef = F49B090A25DFE24200A2FBE1 /* Signupall.xib */; };
 		F49D50F825C9C8A100A887F1 /* DepartMentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49D50F625C9C8A100A887F1 /* DepartMentCollectionViewCell.swift */; };
 		F49D50F925C9C8A100A887F1 /* DepartMentCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F49D50F725C9C8A100A887F1 /* DepartMentCollectionViewCell.xib */; };
 		F4A05C4E25CBB1E100F7503C /* CollectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A05C4C25CBB1E100F7503C /* CollectionTableViewCell.swift */; };
@@ -61,6 +63,8 @@
 		F494505625C7459B0013E56E /* exetension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = exetension.swift; sourceTree = "<group>"; };
 		F494505825C779100013E56E /* HeaderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCollectionViewCell.swift; sourceTree = "<group>"; };
 		F494505925C779100013E56E /* HeaderCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderCollectionViewCell.xib; sourceTree = "<group>"; };
+		F49B090925DFE24200A2FBE1 /* Signupall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Signupall.swift; sourceTree = "<group>"; };
+		F49B090A25DFE24200A2FBE1 /* Signupall.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Signupall.xib; sourceTree = "<group>"; };
 		F49D50F625C9C8A100A887F1 /* DepartMentCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartMentCollectionViewCell.swift; sourceTree = "<group>"; };
 		F49D50F725C9C8A100A887F1 /* DepartMentCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DepartMentCollectionViewCell.xib; sourceTree = "<group>"; };
 		F4A05C4C25CBB1E100F7503C /* CollectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionTableViewCell.swift; sourceTree = "<group>"; };
@@ -85,21 +89,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F407793825DE065F000A3A89 /* Signin and Signup Scene */ = {
+		F407793825DE065F000A3A89 /* SigninVC and scene */ = {
 			isa = PBXGroup;
 			children = (
+				F407793025DE0625000A3A89 /* SigninVC.swift */,
 				F407793125DE0625000A3A89 /* SigninVC.xib */,
-				F407793525DE0646000A3A89 /* SignupVC.xib */,
 			);
-			path = "Signin and Signup Scene";
+			path = "SigninVC and scene";
 			sourceTree = "<group>";
 		};
 		F407793925DE06AD000A3A89 /* Signin and Signup VC */ = {
 			isa = PBXGroup;
 			children = (
-				F407793825DE065F000A3A89 /* Signin and Signup Scene */,
-				F407793025DE0625000A3A89 /* SigninVC.swift */,
-				F407793425DE0646000A3A89 /* SignupVC.swift */,
+				F407793825DE065F000A3A89 /* SigninVC and scene */,
+				F49B090825DFE1BE00A2FBE1 /* SignupVC ans scene */,
 			);
 			path = "Signin and Signup VC";
 			sourceTree = "<group>";
@@ -180,6 +183,25 @@
 				F49282CC25D22B3A001A9C3D /* Assets.xcassets */,
 			);
 			path = Ma5dom;
+			sourceTree = "<group>";
+		};
+		F49B090825DFE1BE00A2FBE1 /* SignupVC ans scene */ = {
+			isa = PBXGroup;
+			children = (
+				F407793525DE0646000A3A89 /* SignupVC.xib */,
+				F407793425DE0646000A3A89 /* SignupVC.swift */,
+				F49B090D25DFE24900A2FBE1 /* Signup name,phone,mail */,
+			);
+			path = "SignupVC ans scene";
+			sourceTree = "<group>";
+		};
+		F49B090D25DFE24900A2FBE1 /* Signup name,phone,mail */ = {
+			isa = PBXGroup;
+			children = (
+				F49B090925DFE24200A2FBE1 /* Signupall.swift */,
+				F49B090A25DFE24200A2FBE1 /* Signupall.xib */,
+			);
+			path = "Signup name,phone,mail";
 			sourceTree = "<group>";
 		};
 		F49D50FA25C9CF6B00A887F1 /* DepartMentCollectionViewCell */ = {
@@ -326,6 +348,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F494504B25C73EE20013E56E /* LaunchScreen.storyboard in Resources */,
+				F49B090C25DFE24200A2FBE1 /* Signupall.xib in Resources */,
 				F4A05C4F25CBB1E100F7503C /* CollectionTableViewCell.xib in Resources */,
 				F494505B25C779100013E56E /* HeaderCollectionViewCell.xib in Resources */,
 				F4A05C5825CBB7FC00F7503C /* CollectionViewItemsCell.xib in Resources */,
@@ -349,6 +372,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4FB473225DA0B10000A8EF6 /* LaunchCollectionViewCell.swift in Sources */,
+				F49B090B25DFE24200A2FBE1 /* Signupall.swift in Sources */,
 				F494503F25C73EDD0013E56E /* AppDelegate.swift in Sources */,
 				F4CC3C5C25D88461009AEB9F /* LanuchVC.swift in Sources */,
 				F4926BD425CA29D8001D9018 /* TabbarController.swift in Sources */,
