@@ -13,16 +13,16 @@ extension HomeController:UICollectionViewDelegate,UICollectionViewDataSource,UIC
     func SetUpHomeController()
     {
         // HeaderViewShape and collectionViewHeader and timercontrol
-        TopView.roundCorners([.bottomRight,.bottomLeft], radius: 15)
+       
         CollectionViewHeader.delegate = self
         CollectionViewHeader.dataSource = self
         CollectionViewHeader.register(UINib(nibName: "HeaderCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "Head")
         time = Timer.scheduledTimer(timeInterval: 2.5, target: self, selector: #selector(moveonTime), userInfo: nil, repeats: true)
            pagecontrol.numberOfPages = photo.count
         
-        // department collectionview
-        // i change it
-        
+        // constraint
+        TopView.heightAnchor.constraint(equalToConstant: (UIScreen.main.bounds.height/5)-10).isActive = true
+        TopView.layer.cornerRadius = 10
         // searchBar shape
         SearchBar.layer.cornerRadius = 20
         SearchBar.clipsToBounds = true

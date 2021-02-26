@@ -10,10 +10,11 @@ import UIKit
 
 class CollectionTableViewCell: UITableViewCell,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
     static let identifier = "CollectionTableViewCell"
+    var collectionviewsection:Int = 0
     
     var tableviewsecion:Int = 0
     let items1 = [ "f1","f2","f1","f2"]
-    let items2 = ["s1","s2","s1","s2"]
+    let items2 = ["s1","s2","f1","f2"]
     let departmentphoto = [ "icon", "icon-1", "icon-2","icon-3", "icon-4", "icon-5" ,"icon-6", "icon-7" ,"icon-7", "icon-8" ,"icon-9" ,"icon-10"]
     @IBOutlet weak var collectionitems: UICollectionView!
     override func awakeFromNib() {
@@ -26,21 +27,19 @@ class CollectionTableViewCell: UITableViewCell,UICollectionViewDelegate,UICollec
         collectionitems.reloadData()
         
     }
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 3
-    }
+  
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        if section == 0
+        if tableviewsecion == 0
         {
             return departmentphoto.count
         }
-        if section == 1
+        if tableviewsecion == 1
         {
             return items1.count
         }
-        if section == 2
+        if tableviewsecion == 2
         {
             return items2.count
         }
@@ -64,14 +63,14 @@ class CollectionTableViewCell: UITableViewCell,UICollectionViewDelegate,UICollec
             let cell  = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewItemsCell", for: indexPath) as! CollectionViewItemsCell
             cell.transform = CGAffineTransform(scaleX:-1,y: 1);
             collectionView.transform = CGAffineTransform(scaleX:-1,y: 1);
-            cell.configrecell(image: items1[indexPath.row])
+            cell.imageitems.image = UIImage(named: items1[indexPath.row])
             return cell
         }
         if tableviewsecion == 2 {
             let cell  = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewItemsCell", for: indexPath) as! CollectionViewItemsCell
             cell.transform = CGAffineTransform(scaleX:-1,y: 1);
             collectionView.transform = CGAffineTransform(scaleX:-1,y: 1);
-            cell.configrecell(image: items2[indexPath.row])
+           cell.imageitems.image = UIImage(named: items2[indexPath.row])
             return cell
         }
         return UICollectionViewCell()
@@ -80,11 +79,11 @@ class CollectionTableViewCell: UITableViewCell,UICollectionViewDelegate,UICollec
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
        
-        if indexPath.section == 0
+        if tableviewsecion == 0
         {
             return CGSize(width: 100, height: 150)
         }
-            return CGSize(width:157, height: 250)
+            return CGSize(width:157, height: 245)
     }
     
     

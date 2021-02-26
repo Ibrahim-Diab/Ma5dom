@@ -59,9 +59,15 @@ class SigninVC: UIViewController {
         signinview.transform = CGAffineTransform(translationX: 0, y: UIScreen.main.bounds.height+10)
         // segment addtarget
         segmentcontrol.addTarget(self, action: #selector(methood), for: .valueChanged)
+        signinbutton.addTarget(self, action: #selector(handelsigninbutton), for: .touchUpInside)
         
     }
-    
+    @objc func handelsigninbutton()
+    {
+        let dest = TabbarController()
+        dest.modalPresentationStyle = .fullScreen
+        present(dest, animated: true, completion: nil)
+    }
     
     
     

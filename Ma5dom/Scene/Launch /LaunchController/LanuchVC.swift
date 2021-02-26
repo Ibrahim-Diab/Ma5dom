@@ -36,7 +36,7 @@ class LanuchVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSo
     }
     @objc func skipallscreen()
     {
-        let dest = TabbarController()
+        let dest = SigninVC()
         dest.modalPresentationStyle = .fullScreen
         present(dest, animated: true, completion: nil)
         

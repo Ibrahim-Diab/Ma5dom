@@ -19,10 +19,4 @@ class CollectionViewItemsCell: UICollectionViewCell {
         imageitems.contentMode = .scaleAspectFit
     }
     
-    func configrecell(image:String)
-    {
-        self.imageitems.image = UIImage(named: image)
-        
-    }
-
 }

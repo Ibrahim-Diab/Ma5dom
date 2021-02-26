@@ -13,11 +13,11 @@ class HomeController: UIViewController {
     
     @IBOutlet weak var HomeTableView: UITableView!
     @IBOutlet weak var SearchBar: UISearchBar!
-
     @IBOutlet weak var pagecontrol: UIPageControl!
     @IBOutlet weak var CollectionViewHeader: UICollectionView!
     @IBOutlet weak var TopView: UIView!
-  
+
+   
     
     // department images
     let departmentphoto = [ "icon", "icon-1", "icon-2","icon-3", "icon-4", "icon-5" ,"icon-6", "icon-7" ,"icon-7", "icon-8" ,"icon-9" ,"icon-10"]
@@ -28,7 +28,6 @@ class HomeController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         SetUpHomeController()
-        
         //  home tableview control
         HomeTableView.delegate = self
         HomeTableView.dataSource = self
@@ -116,10 +115,21 @@ extension HomeController:UITableViewDelegate,UITableViewDataSource
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell  = tableView.dequeueReusableCell(withIdentifier: "CollectionTableViewCell", for: indexPath)  as! CollectionTableViewCell
-        cell.tableviewsecion = indexPath.section
+       cell.tableviewsecion = indexPath.section
+       //  cell.collectionviewsection = indexPath.section
+      //  print(indexPath.section)
         return cell
         
+        
     }
+  
+//    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+////        x = indexPath.section
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "CollectionTableViewCell") as! CollectionTableViewCell
+//  //       cell.tableviewsecion = indexPath.section
+//        print(cell.tableviewsecion)
+//    }
+//
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
