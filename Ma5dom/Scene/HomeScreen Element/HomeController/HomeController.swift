@@ -109,27 +109,19 @@ extension HomeController:UITableViewDelegate,UITableViewDataSource
          let dest = DepartmentVc()
                dest.modalPresentationStyle = .fullScreen
                  present(dest, animated: true, completion: nil)
-       // present(TabbarController(), animated: true, completion: nil)
+       
         
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell  = tableView.dequeueReusableCell(withIdentifier: "CollectionTableViewCell", for: indexPath)  as! CollectionTableViewCell
        cell.tableviewsecion = indexPath.section
-       //  cell.collectionviewsection = indexPath.section
-      //  print(indexPath.section)
+      
         return cell
         
         
     }
   
-//    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-////        x = indexPath.section
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "CollectionTableViewCell") as! CollectionTableViewCell
-//  //       cell.tableviewsecion = indexPath.section
-//        print(cell.tableviewsecion)
-//    }
-//
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
